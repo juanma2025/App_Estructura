@@ -1,0 +1,136 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #0069fb; /* Choose a solid background color */
+}
+
+/* Animación para el fondo */
+@keyframes backgroundFade {
+    0% {
+        background: linear-gradient(to bottom, #0a4afa, #49a32d);
+    }
+    100% {
+        background: linear-gradient(to bottom, #951bc2, #09db41 40%, #e70bbb 100%);
+    }
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #bb09db;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 50s ease-out;
+    opacity: 0;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de títulos con gradiente */
+h1, h2 {
+    font-family: Open Sans, sans-serif;
+    background: linear-gradient(to right, #333, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #333;
+}
+
+/* Interacción en campos de texto */
+input[type="text"], input[type="date"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: calc(100% - 22px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 10s ease;
+}
+
+/* Efecto al hacer hover sobre el campo de texto */
+input[type="text"]:hover, input[type="date"]:hover {
+    border-color: #007bff;
+}
+
+/* Efecto al hacer focus en los campos */
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Interacciones con el botón principal */
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto al hacer clic (active) en el botón */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Estilo alternativo del botón */
+.button-alt {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo de las listas */
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+/* Interacción en las listas al hacer hover */
+li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Animación sutil al cargar la lista */
+li {
+    opacity: 0;
+    animation: listFadeIn 0.5s forwards;
+}
+
+@keyframes listFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li:last-child {
+    border-bottom: none;
+}

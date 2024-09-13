@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Recordatorios</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>App de Recordatorios</h1>
+        <div>
+            <input type="text" id="texto" placeholder="Nuevo recordatorio">
+            <input type="date" id="fecha">
+            <button onclick="agregarRecordatorio()">Agregar</button>
+        </div>
+        <h2>Recordatorios Activos</h2>
+        <ul id="recordatorios-lista"></ul>
+        <h2>Historial de Eliminaciones</h2>
+        <ul id="eliminaciones-lista"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
